@@ -3,17 +3,23 @@
   "id_name": "burstDetector",
   "category": "Analyze",
   "description": "Detect bursts of events within event time series data",
-  "icon": "linechart",
+  "icon": "chrono",
   "help_url": "modules/analyze/burst-detector",
   "parameters": [
     {
-      "name": "Date Column",
+      "name": "Date column",
       "id_name": "date_column_name",
       "type": "column",
       "placeholder": "Select date column"
     },
     {
-      "name": "Time Interval",
+      "name": "Minimum number of events in a burst",
+      "id_name": "trigger_threshold",
+      "type": "integer",
+      "default": "3"
+    },
+    {
+      "name": "Events must happen within",
       "id_name": "interval_length",
       "type": "integer",
       "default": "1"
@@ -24,12 +30,6 @@
       "type": "menu",
       "menu_items": "sec|min|hour|day|week",
       "default": "min"
-    },
-    {
-      "name": "Number of events to trigger",
-      "id_name": "trigger_threshold",
-      "type": "integer",
-      "default": "3"
     }
   ]
 }
