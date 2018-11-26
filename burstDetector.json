@@ -29,7 +29,7 @@
       "id_name": "interval_unit",
       "type": "menu",
       "menu_items": "sec|min|hour|day|week",
-      "default": "min"
+      "default": "1"
     }
   ]
 }
