@@ -16,20 +16,20 @@
       "name": "Minimum number of events in a burst",
       "id_name": "trigger_threshold",
       "type": "integer",
-      "default": "3"
+      "default": 3
     },
     {
       "name": "Events must happen within",
       "id_name": "interval_length",
       "type": "integer",
-      "default": "1"
+      "default": 1
     },
     {
       "name": "",
       "id_name": "interval_unit",
       "type": "menu",
       "menu_items": "sec|min|hour|day|week",
-      "default": "1"
+      "default": 1
     }
   ]
 }
