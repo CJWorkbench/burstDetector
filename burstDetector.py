@@ -1,3 +1,7 @@
+import numpy as np
+import pandas as pd
+
+
 def detect_bursts(timestamps, window, threshold):
     timestamps = timestamps.dropna().sort_values().reset_index(drop=True)
     bursts_start = timestamps.shift(threshold - 1)
