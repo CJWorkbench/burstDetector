@@ -41,7 +41,7 @@ def detect_bursts(timestamps, window, threshold):
         return pd.DataFrame(columns=merged_bursts_columns)
 
 
-def render(table, params):
+def render(table, params, *, input_columns):
     date_column_name = params['date_column_name']
     interval_length = params['interval_length']
     interval_unit = params['interval_unit']
@@ -50,10 +50,13 @@ def render(table, params):
     if not date_column_name:
         return table
 
+    if input_columns[date_column_name].type != 'datetime':
+        # TODO make JSON force column type. Depends on
+        # https://www.pivotaltracker.com/story/show/161234499
+        return 'Input column must be datetime. Please convert it.'
+
     timedelta_units = ['seconds', 'minutes', 'hours', 'days', 'weeks']
     timedelta_unit = timedelta_units[interval_unit]
     window = pd.Timedelta(**{timedelta_unit: interval_length})
 
-    return detect_bursts(pd.to_datetime(table[date_column_name]),
-                         window,
-                         threshold)
+    return detect_bursts(table[date_column_name], window, threshold)
