@@ -13,7 +13,7 @@
       "placeholder": "Select date column"
     },
     {
-      "name": "Minimum number of events in a burst",
+      "name": "Minimum number of events",
       "id_name": "trigger_threshold",
       "type": "integer",
       "default": 3
