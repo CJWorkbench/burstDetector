@@ -36,6 +36,7 @@ def detect_bursts(timestamps, window, threshold):
     merged_bursts_columns = ['start', 'end', 'duration', 'number_of_events']
     if not merged_bursts.empty:
         merged_bursts.columns = merged_bursts_columns
+        merged_bursts.reset_index(drop=True, inplace=True)
         return merged_bursts
     else:
         return pd.DataFrame(columns=merged_bursts_columns)
