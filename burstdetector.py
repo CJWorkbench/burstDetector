@@ -20,26 +20,27 @@ def detect_bursts(timestamps, window, threshold):
 
     # https://stackoverflow.com/questions/40802800
     new_burst = in_burst & (in_burst.shift() != True)
-    bursts = pd.DataFrame({
-        'new_burst': new_burst,
-        'timestamp': timestamps,
-    })
-    bursts = bursts[in_burst]
-    bursts['burst_id'] = bursts['new_burst'].cumsum()
-    merged_bursts = (bursts.groupby('burst_id')
-                     .apply(lambda df: pd.Series([
-                         df['timestamp'].iloc[0],
-                         df['timestamp'].iloc[-1],
-                         df['timestamp'].iloc[-1] - df['timestamp'].iloc[0],
-                         df.shape[0]])))
+    burst_ids = new_burst[in_burst].cumsum()
+    timestamp_groups = timestamps[in_burst].groupby(burst_ids)
 
-    merged_bursts_columns = ['start', 'end', 'duration', 'number_of_events']
-    if not merged_bursts.empty:
-        merged_bursts.columns = merged_bursts_columns
-        merged_bursts.reset_index(drop=True, inplace=True)
-        return merged_bursts
-    else:
-        return pd.DataFrame(columns=merged_bursts_columns)
+    if not len(timestamp_groups):
+        # Return empty dataframe with correct types
+        return pd.DataFrame({
+            'start': pd.Series([], dtype='datetime64[ns]'),
+            'end': pd.Series([], dtype='datetime64[ns]'),
+            'duration': pd.Series([], dtype=str),
+            'number_of_events': pd.Series([], dtype=int),
+        })
+
+    retval = pd.DataFrame({
+        'start': timestamp_groups.first(),
+        'end': timestamp_groups.last(),
+        'duration': (timestamp_groups.last() -
+                     timestamp_groups.first()).astype(str),
+        'number_of_events': timestamp_groups.size(),
+    })
+    retval.reset_index(drop=True, inplace=True)
+    return retval
 
 
 def render(table, params, *, input_columns):
