@@ -57,8 +57,25 @@ def render(table, params, *, input_columns):
         # https://www.pivotaltracker.com/story/show/161234499
         return 'Input column must be datetime. Please convert it.'
 
-    timedelta_units = ['seconds', 'minutes', 'hours', 'days', 'weeks']
-    timedelta_unit = timedelta_units[interval_unit]
-    window = pd.Timedelta(**{timedelta_unit: interval_length})
+    window = pd.Timedelta(**{interval_unit: interval_length})
 
     return detect_bursts(table[date_column_name], window, threshold)
+
+
+def _migrate_params_v0_to_v1(params):
+    """
+    v0: old-style menu integer indexing into seconds|minutes|hours|days|weeks.
+
+    v1: new-style menu.
+    """
+    return {
+        **params,
+        'interval_unit': ['seconds', 'minutes', 'hours', 'days',
+                          'weeks'][params['interval_unit']],
+    }
+
+
+def migrate_params(params):
+    if isinstance(params['interval_unit'], int):
+        params = _migrate_params_v0_to_v1(params)
+    return params

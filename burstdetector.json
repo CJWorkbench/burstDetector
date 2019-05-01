@@ -28,8 +28,14 @@
       "name": "",
       "id_name": "interval_unit",
       "type": "menu",
-      "menu_items": "sec|min|hour|day|week",
-      "default": 1
+      "default": "minutes",
+      "options": [
+          { "value": "seconds", "label": "sec" },
+          { "value": "minutes", "label": "min" },
+          { "value": "hours", "label": "hour" },
+          { "value": "days", "label": "day" },
+          { "value": "weeks", "label": "week" }
+      ]
     }
   ]
 }
