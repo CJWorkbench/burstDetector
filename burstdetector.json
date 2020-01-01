@@ -4,7 +4,7 @@
   "category": "Analyze",
   "description": "Detect bursts of events within time series data.",
   "icon": "chronos",
-  "help_url": "modules/analyze/burst-detector",
+  "help_url": "en/articles/2323155-burst-detector",
   "parameters": [
     {
       "name": "Date column",
