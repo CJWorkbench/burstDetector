@@ -1,57 +1,48 @@
-# Greek translations for PROJECT.
-# Copyright (C) 2020 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
-#, fuzzy
-msgid ""
-msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-07 14:29+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: el\n"
-"Language-Team: el <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
-
+#. default-message: Burst detector
 msgid "_spec.name"
 msgstr ""
 
+#. default-message: Detect bursts of events within time series data.
 msgid "_spec.description"
 msgstr ""
 
+#. default-message: Date column
 msgid "_spec.parameters.date_column_name.name"
 msgstr ""
 
+#. default-message: Select date column
 msgid "_spec.parameters.date_column_name.placeholder"
 msgstr ""
 
+#. default-message: Minimum number of events
 msgid "_spec.parameters.trigger_threshold.name"
 msgstr ""
 
+#. default-message: Events must happen within
 msgid "_spec.parameters.interval_length.name"
 msgstr ""
 
+#. default-message: sec
 msgid "_spec.parameters.interval_unit.options.seconds.label"
 msgstr ""
 
+#. default-message: min
 msgid "_spec.parameters.interval_unit.options.minutes.label"
 msgstr ""
 
+#. default-message: hour
 msgid "_spec.parameters.interval_unit.options.hours.label"
 msgstr ""
 
+#. default-message: day
 msgid "_spec.parameters.interval_unit.options.days.label"
 msgstr ""
 
+#. default-message: week
 msgid "_spec.parameters.interval_unit.options.weeks.label"
 msgstr ""
 
+#. default-message: Input column must be datetime. Please convert it.
 #: burstDetector.py:59
 msgid "badParam.date_column_name.notADate"
 msgstr ""
