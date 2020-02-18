@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-07 14:29+0000\n"
+"POT-Creation-Date: 2020-02-18 15:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: el\n"
@@ -20,37 +20,37 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 msgid "_spec.name"
-msgstr ""
+msgstr "Ανιχνευτής ριπών"
 
 msgid "_spec.description"
-msgstr ""
+msgstr "Εντοπίστε ριπές (εκρήξεις) συμβάντων στα δεδομένα χρονοσειρών."
 
 msgid "_spec.parameters.date_column_name.name"
-msgstr ""
+msgstr "Στήλη ημερομηνιών"
 
 msgid "_spec.parameters.date_column_name.placeholder"
-msgstr ""
+msgstr "Επιλέξτε στήλη ημερομηνιών"
 
 msgid "_spec.parameters.trigger_threshold.name"
-msgstr ""
+msgstr "Ελάχιστος αριθμός συμβάντων"
 
 msgid "_spec.parameters.interval_length.name"
-msgstr ""
+msgstr "Τα συμβάντα πρέπει να συμβαίνουν εντός διαστήματος"
 
 msgid "_spec.parameters.interval_unit.options.seconds.label"
-msgstr ""
+msgstr "δευτερολέπτων"
 
 msgid "_spec.parameters.interval_unit.options.minutes.label"
-msgstr ""
+msgstr "λεπτών"
 
 msgid "_spec.parameters.interval_unit.options.hours.label"
-msgstr ""
+msgstr "ωρών"
 
 msgid "_spec.parameters.interval_unit.options.days.label"
-msgstr ""
+msgstr "ημερών"
 
 msgid "_spec.parameters.interval_unit.options.weeks.label"
-msgstr ""
+msgstr "εβδομάδων"
 
 #: burstDetector.py:59
 msgid "badParam.date_column_name.notADate"
