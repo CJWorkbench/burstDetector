@@ -1,0 +1,49 @@
+#. default-message: Burst detector
+msgid "_spec.name"
+msgstr ""
+
+#. default-message: Detect bursts of events within time series data.
+msgid "_spec.description"
+msgstr ""
+
+#. default-message: Date column
+msgid "_spec.parameters.date_column_name.name"
+msgstr ""
+
+#. default-message: Select date column
+msgid "_spec.parameters.date_column_name.placeholder"
+msgstr ""
+
+#. default-message: Minimum number of events
+msgid "_spec.parameters.trigger_threshold.name"
+msgstr ""
+
+#. default-message: Events must happen within
+msgid "_spec.parameters.interval_length.name"
+msgstr ""
+
+#. default-message: sec
+msgid "_spec.parameters.interval_unit.options.seconds.label"
+msgstr ""
+
+#. default-message: min
+msgid "_spec.parameters.interval_unit.options.minutes.label"
+msgstr ""
+
+#. default-message: hour
+msgid "_spec.parameters.interval_unit.options.hours.label"
+msgstr ""
+
+#. default-message: day
+msgid "_spec.parameters.interval_unit.options.days.label"
+msgstr ""
+
+#. default-message: week
+msgid "_spec.parameters.interval_unit.options.weeks.label"
+msgstr ""
+
+#. default-message: Input column must be datetime. Please convert it.
+#: burstDetector.py:59
+msgid "badParam.date_column_name.notADate"
+msgstr ""
+

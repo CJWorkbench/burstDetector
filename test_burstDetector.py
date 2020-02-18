@@ -1,5 +1,5 @@
 import unittest
-from burstdetector import migrate_params
+from burstDetector import migrate_params
 
 
 class MigrateParamsTest(unittest.TestCase):
