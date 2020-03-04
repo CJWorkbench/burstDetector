@@ -54,5 +54,4 @@ msgstr "εβδομάδων"
 
 #: burstDetector.py:59
 msgid "badParam.date_column_name.notADate"
-msgstr ""
-
+msgstr "Η στήλη εισόδου πρέπει να είναι τύπου ημερομηνία/ώρα. Μετατρέψτε την."
