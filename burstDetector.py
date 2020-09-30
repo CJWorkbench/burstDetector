@@ -61,7 +61,7 @@ def render(table, params, *, input_columns):
     if not date_column_name:
         return table
 
-    if input_columns[date_column_name].type != "datetime":
+    if input_columns[date_column_name].type not in ("datetime", "timestamp"):
         # TODO make JSON force column type. Depends on
         # https://www.pivotaltracker.com/story/show/161234499
         return i18n.trans(
