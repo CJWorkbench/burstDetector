@@ -7,10 +7,11 @@
   "help_url": "en/articles/2323155-burst-detector",
   "parameters": [
     {
-      "name": "Date column",
+      "name": "Timestamp column",
       "id_name": "date_column_name",
       "type": "column",
-      "placeholder": "Select date column"
+      "placeholder": "Select timestamp column",
+      "column_types": ["timestamp"]
     },
     {
       "name": "Minimum number of events",

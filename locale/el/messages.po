@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-18 15:00+0000\n"
+"POT-Creation-Date: 2020-10-02 15:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: el\n"
@@ -25,9 +25,11 @@ msgstr "Ανιχνευτής ριπών"
 msgid "_spec.description"
 msgstr "Εντοπίστε ριπές (εκρήξεις) συμβάντων στα δεδομένα χρονοσειρών."
 
+#, fuzzy
 msgid "_spec.parameters.date_column_name.name"
 msgstr "Στήλη ημερομηνιών"
 
+#, fuzzy
 msgid "_spec.parameters.date_column_name.placeholder"
 msgstr "Επιλέξτε στήλη ημερομηνιών"
 
@@ -52,6 +54,7 @@ msgstr "ημερών"
 msgid "_spec.parameters.interval_unit.options.weeks.label"
 msgstr "εβδομάδων"
 
-#: burstDetector.py:59
+#: _deprecated_i18n_messages.py:7
 msgid "badParam.date_column_name.notADate"
 msgstr "Η στήλη εισόδου πρέπει να είναι τύπου ημερομηνία/ώρα. Μετατρέψτε την."
+

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-07 14:29+0000\n"
+"POT-Creation-Date: 2020-10-02 15:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -26,10 +26,10 @@ msgid "_spec.description"
 msgstr "Detect bursts of events within time series data."
 
 msgid "_spec.parameters.date_column_name.name"
-msgstr "Date column"
+msgstr "Timestamp column"
 
 msgid "_spec.parameters.date_column_name.placeholder"
-msgstr "Select date column"
+msgstr "Select timestamp column"
 
 msgid "_spec.parameters.trigger_threshold.name"
 msgstr "Minimum number of events"
@@ -52,7 +52,7 @@ msgstr "day"
 msgid "_spec.parameters.interval_unit.options.weeks.label"
 msgstr "week"
 
-#: burstDetector.py:59
+#: _deprecated_i18n_messages.py:7
 msgid "badParam.date_column_name.notADate"
 msgstr "Input column must be datetime. Please convert it."
 
